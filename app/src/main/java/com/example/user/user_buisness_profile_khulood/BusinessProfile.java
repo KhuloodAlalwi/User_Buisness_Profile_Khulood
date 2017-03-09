@@ -4,21 +4,14 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
-import static android.os.Build.VERSION_CODES.M;
-import static com.example.user.user_buisness_profile_khulood.R.id.imageButtonUserBookmark;
-import static com.example.user.user_buisness_profile_khulood.R.id.imageButtonUserLikes;
-import static com.example.user.user_buisness_profile_khulood.R.id.imageButtonUserReviews;
-
-public class UserProfile extends AppCompatActivity {
+public class BusinessProfile extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.user_profile);
+        setContentView(R.layout.business_profile);
 
 
         // initiate view's
@@ -32,7 +25,7 @@ public class UserProfile extends AppCompatActivity {
         imageButtonUserCat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent whenClick = new Intent(UserProfile.this, UserLikesMainActivity.class);
+                Intent whenClick = new Intent(BusinessProfile.this, BusinessLikesMainActivity.class);
                 startActivity(whenClick);
             }
         });
@@ -40,7 +33,7 @@ public class UserProfile extends AppCompatActivity {
         imageButtonUserReviews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent whenClick = new Intent(UserProfile.this,UserReviewMainActivity.class);
+                Intent whenClick = new Intent(BusinessProfile.this,BusinessReviewMainActivity.class);
                 startActivity(whenClick);
             }
         });
@@ -48,7 +41,7 @@ public class UserProfile extends AppCompatActivity {
         imageButtonUserLikes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent whenClick = new Intent(UserProfile.this,UserLikesMainActivity.class);
+                Intent whenClick = new Intent(BusinessProfile.this,BusinessLikesMainActivity.class);
                 startActivity(whenClick);
             }
         });
@@ -56,7 +49,7 @@ public class UserProfile extends AppCompatActivity {
         imageButtonUserBookmark.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent whenClick = new Intent(UserProfile.this,UserBookmarkMainActivity.class);
+                Intent whenClick = new Intent(BusinessProfile.this,BusinessBookmarkMainActivity.class);
                 startActivity(whenClick);
             }
         });

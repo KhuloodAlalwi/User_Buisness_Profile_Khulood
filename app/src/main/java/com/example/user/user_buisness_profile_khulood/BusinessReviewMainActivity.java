@@ -8,20 +8,20 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserBookmarkMainActivity extends AppCompatActivity {
+public class BusinessReviewMainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
 
-    private List<UserBookmarkListItem> listItems;
+    private List<BusinessReviewListItem> listItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_user_bookmark);
+        setContentView(R.layout.activity_main_business_review);
 
 
-          /* initialize recycler veiw take id from xml file*/
+           /* initialize recycler veiw take id from xml file*/
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
@@ -33,13 +33,12 @@ public class UserBookmarkMainActivity extends AppCompatActivity {
         listItems = new ArrayList<>();
 
         for (int i = 0; i <= 10; i++) {
-            UserBookmarkListItem listItem = new UserBookmarkListItem(
+            BusinessReviewListItem listItem = new BusinessReviewListItem(
                     R.drawable.target,
                     "Place Name" + i + 1,
                     "Place description",
-
-                    R.drawable.bookmark
-
+                    "Edit text",
+                    R.attr.ratingBarStyleSmall
 
             );
 
@@ -48,12 +47,10 @@ public class UserBookmarkMainActivity extends AppCompatActivity {
         }
 
 
-        adapter = new UserBookmarkAdapter(listItems, this);
+        adapter = new BusinessReviewAdapter(listItems, this);
 
         recyclerView.setAdapter(adapter);
 
-
     }
-
 
 }

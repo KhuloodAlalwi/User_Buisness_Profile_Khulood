@@ -1,6 +1,5 @@
 package com.example.user.user_buisness_profile_khulood;
 
-import android.app.LauncherActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,19 +8,20 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserLikesMainActivity extends AppCompatActivity {
+public class BusinessBookmarkMainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
 
-    private List<UserLikesListItem> listItems;
+    private List<BusinessBookmarkListItem> listItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_user_likes);
+        setContentView(R.layout.activity_main_business_bookmark);
 
-           /* initialize recycler veiw take id from xml file*/
+
+          /* initialize recycler veiw take id from xml file*/
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
@@ -33,12 +33,12 @@ public class UserLikesMainActivity extends AppCompatActivity {
         listItems = new ArrayList<>();
 
         for (int i = 0; i <= 10; i++) {
-            UserLikesListItem listItem = new UserLikesListItem(
+            BusinessBookmarkListItem listItem = new BusinessBookmarkListItem(
                     R.drawable.target,
                     "Place Name" + i + 1,
                     "Place description",
 
-                    R.drawable.like
+                    R.drawable.bookmark
 
 
             );
@@ -48,10 +48,12 @@ public class UserLikesMainActivity extends AppCompatActivity {
         }
 
 
-        adapter = new UserLikesAdapter(listItems, this);
+        adapter = new BusinessBookmarkAdapter(listItems, this);
 
         recyclerView.setAdapter(adapter);
 
+
     }
+
 
 }

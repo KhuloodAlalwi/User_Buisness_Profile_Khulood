@@ -4,14 +4,14 @@ package com.example.user.user_buisness_profile_khulood;
  * Created by USER on 3/6/2017.
  */
 
-public class UserBookmarkListItem {
+public class BusinessBookmarkListItem {
 
     private int placeImageUserBookmark;
     private String placeNameUserBookmark;
     private String placeDescUserBookmark;
     private int BookmarkImageUser;
 
-    public UserBookmarkListItem(int placeImageUserBookmark, String placeNameUserBookmark, String placeDescUserBookmark, int bookmarkImageUser) {
+    public BusinessBookmarkListItem(int placeImageUserBookmark, String placeNameUserBookmark, String placeDescUserBookmark, int bookmarkImageUser) {
         this.placeImageUserBookmark = placeImageUserBookmark;
         this.placeNameUserBookmark = placeNameUserBookmark;
         this.placeDescUserBookmark = placeDescUserBookmark;

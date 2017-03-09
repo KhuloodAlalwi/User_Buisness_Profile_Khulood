@@ -17,14 +17,14 @@ import java.util.List;
  */
 
 // ...1...we need to make another class for view holder so we will extend viewHolder for this Adapter
-public class UserBookmarkAdapter extends RecyclerView.Adapter<UserBookmarkAdapter.ViewHolder> {
+public class BusinessBookmarkAdapter extends RecyclerView.Adapter<BusinessBookmarkAdapter.ViewHolder> {
     //...7... Define the list items java
-    private List<UserBookmarkListItem> listItems;
+    private List<BusinessBookmarkListItem> listItems;
     private Context context;
 
     //..8..GEnerate constructore
 
-    public UserBookmarkAdapter(List<UserBookmarkListItem> listItems, Context context) {
+    public BusinessBookmarkAdapter(List<BusinessBookmarkListItem> listItems, Context context) {
         this.listItems = listItems;
         this.context = context;
     }
@@ -39,7 +39,7 @@ public class UserBookmarkAdapter extends RecyclerView.Adapter<UserBookmarkAdapte
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.user_bookmark_list_item, parent, false);
+                .inflate(R.layout.business_bookmark_list_item, parent, false);
         return new ViewHolder(v);
     }
 
@@ -50,7 +50,7 @@ public class UserBookmarkAdapter extends RecyclerView.Adapter<UserBookmarkAdapte
     //and will Bind data to ViewHolder class means will show data to recyclerView
     public void onBindViewHolder(final ViewHolder holder, int position) {
         //..10..get list item from object in step 7
-        UserBookmarkListItem listItem = listItems.get(position); //position of userBoomarklistItem
+        BusinessBookmarkListItem listItem = listItems.get(position); //position of userBoomarklistItem
         holder.imageViewPlaceImageUserBookmark.setImageResource(listItem.getPlaceImageUserBookmark());
         holder.textViewPlaceNameUserBookmark.setText(listItem.getPlaceNameUserBookmark());
                                 holder.textViewPlaceDescUserBookmark.setText(listItem.getPlaceDescUserBookmark());

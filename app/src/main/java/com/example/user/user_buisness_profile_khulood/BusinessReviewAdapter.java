@@ -15,29 +15,24 @@ import android.widget.TextView;
 import java.util.List;
 
 import static com.example.user.user_buisness_profile_khulood.R.id.editUserComment;
-import static com.example.user.user_buisness_profile_khulood.R.id.editUserComment;
 import static com.example.user.user_buisness_profile_khulood.R.id.imagePlaceImageUserReview;
-import static com.example.user.user_buisness_profile_khulood.R.id.imagePlaceImageUserReview;
-import static com.example.user.user_buisness_profile_khulood.R.id.ratingUserRating;
 import static com.example.user.user_buisness_profile_khulood.R.id.ratingUserRating;
 import static com.example.user.user_buisness_profile_khulood.R.id.textPlaceNameUserReview;
 import static com.example.user.user_buisness_profile_khulood.R.id.textPlaceDescUserReview;
-import static com.example.user.user_buisness_profile_khulood.R.id.textPlaceNameUserReview;
-import static com.example.user.user_buisness_profile_khulood.R.id.textViewPlaceDescUserLikes;
 
 
 /**
  * Created by USER on 3/7/2017.
  */
 
-public class UserReviewAdapter extends RecyclerView.Adapter<UserReviewAdapter.ViewHolder> {
+public class BusinessReviewAdapter extends RecyclerView.Adapter<BusinessReviewAdapter.ViewHolder> {
     //...7... Define the list items java
-    private List<UserReviewListItem> listItems;
+    private List<BusinessReviewListItem> listItems;
     private Context context;
 
     //..8..GEnerate constructore
 
-    public UserReviewAdapter(List<UserReviewListItem> listItems, Context context) {
+    public BusinessReviewAdapter(List<BusinessReviewListItem> listItems, Context context) {
         this.listItems = listItems;
         this.context = context;
     }
@@ -53,7 +48,7 @@ public class UserReviewAdapter extends RecyclerView.Adapter<UserReviewAdapter.Vi
 
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.user_review_list_item, parent, false);
+                .inflate(R.layout.business_review_list_item, parent, false);
 
         return new ViewHolder(v);
 
@@ -67,7 +62,7 @@ public class UserReviewAdapter extends RecyclerView.Adapter<UserReviewAdapter.Vi
     //and will Bind data to ViewHolder class means will show data to recyclerView
     public void onBindViewHolder(final ViewHolder holder, int position) {
         //..10..get list item from object in step 7
-        UserReviewListItem listItem = listItems.get(position); //position of userBoomarklistItem
+        BusinessReviewListItem listItem = listItems.get(position); //position of userBoomarklistItem
         holder.imageViewPlaceImageUserReview.setImageResource(listItem.getPlaceImageUserReview());
         holder.textViewPlaceNameUserReview.setText(listItem.getPlaceNameUserReview());
         holder.textViewPlaceDescUserReview.setText(listItem.getPlaceDescUserReview());

@@ -13,29 +13,29 @@ import android.widget.TextView;
 import java.util.List;
 
 /**
- * Created by USER on 3/5/2017.
+ * Created by USER on 3/10/2017.
  */
 
-public class UserLikesAdapter extends RecyclerView.Adapter<UserLikesAdapter.ViewHolder> {
-    private List<UserLikesListItem> listItems;
+public class BusinessEventAdapter extends RecyclerView.Adapter<BusinessEventAdapter.ViewHolder> {
+    private List<BusinessEventListItem> listItems;
     private Context context;
 
-    public UserLikesAdapter(List<UserLikesListItem> listItems, Context context) {
+    public BusinessEventAdapter(List<BusinessEventListItem> listItems, Context context) {
         this.listItems = listItems;
         this.context = context;
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public BusinessEventAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.user_likes_list_item, parent, false);
-        return new ViewHolder(v);
+                .inflate(R.layout.business_likes_list_item, parent, false);
+        return new BusinessEventAdapter.ViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(final ViewHolder holder, int position) {
+    public void onBindViewHolder(final BusinessLikesAdapter.ViewHolder holder, int position) {
 
-        UserLikesListItem listItem = listItems.get(position);
+        BusinessEventListItem listItem = listItems.get(position);
         holder.imageViewPlaceImageUserLikes.setImageResource(listItem.getPlaceImageUserLikes());
         holder.textViewPlaceNameUserLikes.setText(listItem.getPlaceNameUserLikes());
         holder.textViewPlaceDescUserLikes.setText(listItem.getPlaceDescUserLikes());

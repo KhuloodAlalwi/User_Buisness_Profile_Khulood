@@ -8,20 +8,17 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.R.attr.rating;
-
-public class UserReviewMainActivity extends AppCompatActivity {
+public class BusinessLikesMainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
 
-    private List<UserReviewListItem> listItems;
+    private List<BusinessLikesListItem> listItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_user_review);
-
+        setContentView(R.layout.activity_main_business_likes);
 
            /* initialize recycler veiw take id from xml file*/
 
@@ -35,12 +32,13 @@ public class UserReviewMainActivity extends AppCompatActivity {
         listItems = new ArrayList<>();
 
         for (int i = 0; i <= 10; i++) {
-            UserReviewListItem listItem = new UserReviewListItem(
+            BusinessLikesListItem listItem = new BusinessLikesListItem(
                     R.drawable.target,
                     "Place Name" + i + 1,
                     "Place description",
-                    "Edit text",
-                    R.attr.ratingBarStyleSmall
+
+                    R.drawable.like
+
 
             );
 
@@ -49,7 +47,7 @@ public class UserReviewMainActivity extends AppCompatActivity {
         }
 
 
-        adapter = new UserReviewAdapter(listItems, this);
+        adapter = new BusinessLikesAdapter(listItems, this);
 
         recyclerView.setAdapter(adapter);
 

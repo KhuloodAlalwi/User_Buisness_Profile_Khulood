@@ -8,16 +8,18 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UserProfile">
+        <activity android:name=".BusinessProfile">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UserLikesMainActivity" />
-        <activity android:name=".UserBookmarkMainActivity" />
-        <activity android:name=".UserReviewMainActivity"></activity>
+        <activity android:name=".BusinessLikesMainActivity" />
+        <activity android:name=".BusinessBookmarkMainActivity" />
+        <activity android:name=".BusinessReviewMainActivity" />
+        <activity android:name=".BusinessEventMainActivity" />
+        <activity android:name=".BusinessPlaceMainActivity"></activity>
     </application>
 
 </manifest>

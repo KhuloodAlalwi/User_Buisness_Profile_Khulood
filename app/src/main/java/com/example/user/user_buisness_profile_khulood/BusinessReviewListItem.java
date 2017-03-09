@@ -4,7 +4,7 @@ package com.example.user.user_buisness_profile_khulood;
  * Created by USER on 3/7/2017.
  */
 
-public class UserReviewListItem {
+public class BusinessReviewListItem {
 
     private int placeImageUserReview;
     private String placeNameUserReview;
@@ -12,7 +12,7 @@ public class UserReviewListItem {
     private String editTextUserComment;
     private int ratingBarUserRating;
 
-    public UserReviewListItem(int placeImageUserReview, String placeNameUserReview, String placeDescUserReview, String editTextUserComment, int ratingBarUserRating) {
+    public BusinessReviewListItem(int placeImageUserReview, String placeNameUserReview, String placeDescUserReview, String editTextUserComment, int ratingBarUserRating) {
         this.placeImageUserReview = placeImageUserReview;
         this.placeNameUserReview = placeNameUserReview;
         this.placeDescUserReview = placeDescUserReview;
