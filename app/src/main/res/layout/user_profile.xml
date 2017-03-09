@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="70dp"
+        android:id="@+id/imageViewUserPhoto" />
+
+    <TextView
+        android:text="Profile Picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageViewUserPhoto"
+        android:layout_toEndOf="@+id/imageViewUserPhoto"
+        android:layout_marginStart="27dp"
+        android:id="@+id/textViewUserPhoto" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/like"
+        android:id="@+id/imageButtonUserLikes"
+        android:layout_below="@+id/imageButtonUserCat"
+        android:layout_alignStart="@+id/imageButtonUserCat"
+        android:layout_marginTop="32dp" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/bookmarkbutton"
+        android:id="@+id/imageButtonUserBookmark"
+        android:layout_alignTop="@+id/imageButtonUserLikes"
+        android:layout_alignStart="@+id/imageButtonUserReviews" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/reviews"
+        android:id="@+id/imageButtonUserReviews"
+        android:layout_marginStart="27dp"
+        android:layout_alignTop="@+id/imageButtonUserCat"
+        android:layout_toEndOf="@+id/imageButtonUserCat" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/categories"
+        android:id="@+id/imageButtonUserCat"
+        android:layout_marginTop="42dp"
+        android:layout_below="@+id/imageViewUserPhoto"
+        android:layout_alignStart="@+id/imageViewUserPhoto" />
+
+
+</RelativeLayout>

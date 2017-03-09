@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:elevation="4dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="111dp"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                app:srcCompat="@drawable/target"
+                android:id="@+id/imageViewPlaceImageUserLikes"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" />
+
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                app:srcCompat="@drawable/heart"
+                android:id="@+id/imageViewLikeImageUserLikes"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/textViewOptionsUserLikes" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewPlaceDescUserLikes"
+                android:text="Place Description"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_marginLeft="3dp"
+                android:layout_below="@+id/textViewPlaceNameUserLikes"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imageViewPlaceImageUserLikes"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:text="Place Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewPlaceNameUserLikes"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/imageViewPlaceImageUserLikes"
+                android:layout_alignStart="@+id/textViewPlaceDescUserLikes" />
+            <TextView
+                android:id="@+id/textViewOptionsUserLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:text="&#8942;"
+                android:textAppearance="?android:textAppearanceLarge" />
+
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

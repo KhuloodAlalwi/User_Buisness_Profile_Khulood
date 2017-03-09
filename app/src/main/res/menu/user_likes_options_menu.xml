@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/userLikesView"
+        android:title="View" />
+
+    <item
+        android:id="@+id/userLikesUnlike"
+        android:title="Unlike" />
+
+    <!-- <item
+         android:id="@+id/menu3"
+         android:title="Delete" /> -->
+
+</menu>
