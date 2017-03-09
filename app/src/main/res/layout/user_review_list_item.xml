@@ -72,8 +72,7 @@
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                 android:ems="10"
                 android:layout_alignParentBottom="true"
-                android:layout_alignStart="@+id/textPlaceDescUserReview"
-                android:layout_marginStart="22dp" />
+                android:layout_alignStart="@+id/textPlaceDescUserReview" />
 
 
         </RelativeLayout>
