@@ -30,7 +30,7 @@
                 android:layout_width="15dp"
                 android:layout_height="15dp"
                 app:srcCompat="@drawable/heart"
-                android:layout_toLeftOf="@id/ratingBar"
+                android:layout_toLeftOf="@+id/ratingBar"
                 android:layout_alignParentBottom="true"
                 android:id="@+id/imageViewLikeImageUserLikes" />
             <ImageView

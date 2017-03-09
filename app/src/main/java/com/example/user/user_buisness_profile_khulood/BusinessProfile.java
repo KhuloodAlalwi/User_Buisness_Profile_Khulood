@@ -19,6 +19,9 @@ public class BusinessProfile extends AppCompatActivity {
         ImageButton imageButtonUserReviews = (ImageButton)findViewById(R.id.imageButtonUserReviews);
         ImageButton imageButtonUserLikes = (ImageButton)findViewById(R.id.imageButtonUserLikes);
         ImageButton imageButtonUserBookmark = (ImageButton)findViewById(R.id.imageButtonUserBookmark);
+        ImageButton imageButton2 = (ImageButton)findViewById(R.id.imageButton2);
+        ImageButton imageButton = (ImageButton)findViewById(R.id.imageButton);
+
 
 // perform click event on button's
 
@@ -50,6 +53,22 @@ public class BusinessProfile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent whenClick = new Intent(BusinessProfile.this,BusinessBookmarkMainActivity.class);
+                startActivity(whenClick);
+            }
+        });
+
+        imageButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent whenClick = new Intent(BusinessProfile.this,BusinessEventMainActivity.class);
+                startActivity(whenClick);
+            }
+        });
+
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent whenClick = new Intent(BusinessProfile.this,BusinessPlaceMainActivity.class);
                 startActivity(whenClick);
             }
         });
