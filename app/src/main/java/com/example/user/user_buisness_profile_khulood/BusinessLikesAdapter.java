@@ -47,7 +47,7 @@ public class BusinessLikesAdapter extends RecyclerView.Adapter<BusinessLikesAdap
                 //creating a popup menu
                 PopupMenu popup = new PopupMenu(context, holder.buttonViewOptionUserLikes);
                 //inflating menu from xml resource
-                popup.inflate(R.menu.user_likes_options_menu);
+                popup.inflate(R.menu.business_likes_options_menu);
                 //adding click listener
                 popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override

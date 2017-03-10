@@ -75,7 +75,7 @@ public class BusinessReviewAdapter extends RecyclerView.Adapter<BusinessReviewAd
                 //creating a popup menu
                 PopupMenu popup = new PopupMenu(context, holder.buttonViewOptionsUserReview);
                 //inflating menu from xml resource
-                popup.inflate(R.menu.user_review_options_menu);
+                popup.inflate(R.menu.business_review_options_menu);
                 //adding click listener
                 popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override

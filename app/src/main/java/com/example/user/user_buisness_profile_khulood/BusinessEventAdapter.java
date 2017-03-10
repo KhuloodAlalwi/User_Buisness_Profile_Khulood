@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import static com.example.user.user_buisness_profile_khulood.R.id.ratingBar;
 import static com.example.user.user_buisness_profile_khulood.R.id.ratingUserRating;
 
 /**
@@ -31,7 +32,7 @@ public class BusinessEventAdapter extends RecyclerView.Adapter<BusinessEventAdap
     @Override
     public BusinessEventAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.activity_business_event_main, parent, false);
+                .inflate(R.layout.business_event_list_item, parent, false);
         return new BusinessEventAdapter.ViewHolder(v);
     }
 
@@ -44,7 +45,7 @@ public class BusinessEventAdapter extends RecyclerView.Adapter<BusinessEventAdap
         holder.textViewPlaceDescUserLikes.setText(listItem.getPlaceDescUserLikes());
         holder.imageViewLikeImageUserLikes.setImageResource(listItem.getLikeImageUser());
         holder.imageViewBookmark.setImageResource(listItem.getBookmarkImageUser());
-        holder.ratingBar.setRating(listItem.getRatingbarBusiness());
+        holder.ratingbar.setRating(listItem.getRatingbarBusiness());
         holder.buttonViewOptionUserLikes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,7 +53,7 @@ public class BusinessEventAdapter extends RecyclerView.Adapter<BusinessEventAdap
                 //creating a popup menu
                 PopupMenu popup = new PopupMenu(context, holder.buttonViewOptionUserLikes);
                 //inflating menu from xml resource
-                popup.inflate(R.menu.user_likes_options_menu);
+                popup.inflate(R.menu.business_likes_options_menu);
                 //adding click listener
                 popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
@@ -91,7 +92,7 @@ public class BusinessEventAdapter extends RecyclerView.Adapter<BusinessEventAdap
         public TextView textViewPlaceDescUserLikes;
         public ImageView imageViewLikeImageUserLikes;
         public ImageView imageViewBookmark;
-        public RatingBar ratingBar;
+        public RatingBar ratingbar;
         public TextView buttonViewOptionUserLikes;
 
 
@@ -105,7 +106,7 @@ public class BusinessEventAdapter extends RecyclerView.Adapter<BusinessEventAdap
             textViewPlaceDescUserLikes = (TextView) itemView.findViewById(R.id.textViewPlaceDescUserLikes);
             imageViewLikeImageUserLikes = (ImageView) itemView.findViewById(R.id.imageViewLikeImageUserLikes);
             imageViewBookmark=(ImageView)itemView.findViewById(R.id.imageViewBookmarkImageUser);
-            ratingBar = (RatingBar) itemView.findViewById(ratingUserRating);
+            ratingbar = (RatingBar) itemView.findViewById(ratingBar);
 
             buttonViewOptionUserLikes = (TextView) itemView.findViewById(R.id.textViewOptionsUserLikes);
 

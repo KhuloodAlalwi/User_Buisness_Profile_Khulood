@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import static com.example.user.user_buisness_profile_khulood.R.id.ratingBar;
 import static com.example.user.user_buisness_profile_khulood.R.id.ratingUserRating;
 
 /**
@@ -31,7 +32,7 @@ public class BusinessPlaceAdapter extends RecyclerView.Adapter<BusinessPlaceAdap
     @Override
     public BusinessPlaceAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.activity_business_place_main, parent, false);
+                .inflate(R.layout.business_place_list_item, parent, false);
         return new BusinessPlaceAdapter.ViewHolder(v);
     }
 
@@ -44,7 +45,7 @@ public class BusinessPlaceAdapter extends RecyclerView.Adapter<BusinessPlaceAdap
         holder.textViewPlaceDescUserLikes.setText(listItem.getPlaceDescUserLikes());
         holder.imageViewLikeImageUserLikes.setImageResource(listItem.getLikeImageUser());
         holder.imageViewBookmark.setImageResource(listItem.getBookmarkImageUser());
-        holder.ratingBar.setRating(listItem.getRatingbarBusiness());
+        holder.ratingbar.setRating(listItem.getRatingbarBusiness());
         holder.buttonViewOptionUserLikes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,21 +53,21 @@ public class BusinessPlaceAdapter extends RecyclerView.Adapter<BusinessPlaceAdap
                 //creating a popup menu
                 PopupMenu popup = new PopupMenu(context, holder.buttonViewOptionUserLikes);
                 //inflating menu from xml resource
-                popup.inflate(R.menu.user_likes_options_menu);
+                popup.inflate(R.menu.business_event_options_menu);
                 //adding click listener
                 popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
-                            case R.id.userLikesView:
+                            case R.id.BsPlaceView:
                                 //handle menu1 click
                                 break;
-                            case R.id.userLikesUnlike:
+                            case R.id.BsPlaceEdit:
                                 //handle menu2 click
                                 break;
-                            // case R.id.menu3:
+                            case R.id.BsPlaceDelete:
                             //handle menu3 click
-                            //   break;
+                                 break;
                         }
                         return false;
                     }
@@ -91,7 +92,7 @@ public class BusinessPlaceAdapter extends RecyclerView.Adapter<BusinessPlaceAdap
         public TextView textViewPlaceDescUserLikes;
         public ImageView imageViewLikeImageUserLikes;
         public ImageView imageViewBookmark;
-        public RatingBar ratingBar;
+        public RatingBar ratingbar;
         public TextView buttonViewOptionUserLikes;
 
 
@@ -105,7 +106,7 @@ public class BusinessPlaceAdapter extends RecyclerView.Adapter<BusinessPlaceAdap
             textViewPlaceDescUserLikes = (TextView) itemView.findViewById(R.id.textViewPlaceDescUserLikes);
             imageViewLikeImageUserLikes = (ImageView) itemView.findViewById(R.id.imageViewLikeImageUserLikes);
             imageViewBookmark=(ImageView)itemView.findViewById(R.id.imageViewBookmarkImageUser);
-            ratingBar = (RatingBar) itemView.findViewById(ratingUserRating);
+            ratingbar = (RatingBar) itemView.findViewById(ratingBar);
 
             buttonViewOptionUserLikes = (TextView) itemView.findViewById(R.id.textViewOptionsUserLikes);
 

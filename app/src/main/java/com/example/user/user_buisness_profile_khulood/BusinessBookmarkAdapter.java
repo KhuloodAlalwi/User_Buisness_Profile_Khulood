@@ -62,7 +62,7 @@ public class BusinessBookmarkAdapter extends RecyclerView.Adapter<BusinessBookma
                                         //creating a popup menu
                                         PopupMenu popup = new PopupMenu(context, holder.buttonViewOptionsUserBookmark);
                                         //inflating menu from xml resource
-                                        popup.inflate(R.menu.user_bookmark_options_menu);
+                                        popup.inflate(R.menu.business_bookmark_options_menu);
                                         //adding click listener
                                         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                                             @Override
